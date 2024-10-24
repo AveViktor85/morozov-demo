@@ -18,7 +18,10 @@ pipeline {
 
     post {
         always {
-            junit '**/target/surefire-reports/*.xml'
+            junit '**/target/*.xml'
+        }
+        failure {
+            mail to: morozovjavadeveloper@gmail.com, subject: 'pipeline failed :('
         }
     }
 }
