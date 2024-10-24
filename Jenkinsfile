@@ -21,6 +21,7 @@ pipeline {
             junit '**/target/*.xml'
         }
         failure {
-            emailext body: 'Shit happens', subject: 'Jenkins fail', to: 'morozovjavadeveloper@gmail.com'        }
+            emailext body: 'Shit happens', subject: 'Jenkins fail', to: 'morozovjavadeveloper@gmail.com'
+        }
     }
 }
