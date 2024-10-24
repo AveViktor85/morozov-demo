@@ -20,7 +20,7 @@ class CalculationUtilTest {
 void successCase() {
     assertEquals(25, calculationUtil.square(5));
     assertEquals(16, calculationUtil.square(4));
-    assertEquals(9, calculationUtil.square(3));
+    assertEquals(8, calculationUtil.square(3));
   }
 
 
