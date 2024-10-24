@@ -21,7 +21,7 @@ pipeline {
             junit '**/target/*.xml'
         }
         failure {
-            mail to: 'morozovjavadeveloper@gmail.com', subject: 'pipeline failed :('
+            mail bcc: '', body: 'Shit happens', cc: '', from: 'Jenkins', replyTo: '', subject: 'Jenkins error', to: 'morozovjavadeveloper@gmail.com'
         }
     }
 }
