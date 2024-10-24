@@ -16,12 +16,11 @@ pipeline {
         }
     }
 
-    post {
+    post
         always {
             junit '**/target/*.xml'
         }
         failure {
-            mail bcc: '', body: 'Shit happens', cc: '', from: 'Jenkins', replyTo: '', subject: 'Jenkins error', to: 'morozovjavadeveloper@gmail.com'
-        }
+            emailext body: 'Shit happens', subject: 'Jenkins fail', to: 'morozovjavadeveloper@gmail.com'        }
     }
 }
